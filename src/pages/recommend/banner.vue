@@ -1,16 +1,15 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="banner_index">
+<!--    轮播-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: "banner"
 }
 </script>
 
-<style>
-
+<style scoped>
 
 </style>

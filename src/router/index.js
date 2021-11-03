@@ -1,15 +1,29 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  routes: [
+const router = new VueRouter({
+  routes:[
+    //配置页面的路由路径
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      //重定向路由配置
+      path:'/',
+      component:()=>import('../pages/recommend/index')
+    },
+    {
+      path:'/hot',
+      component:()=>import('../pages/hot/index')
+    },
+    {
+      path:'/recommend',
+      component:()=>import('../pages/recommend/index')
+    },
+    {
+      path:'/search',
+      component:()=>import('../pages/search/index')
     }
   ]
 })
+
+export  default  router
